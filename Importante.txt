@@ -1,0 +1,3 @@
+Adicionar plataforma Android para rodar em seu dispositivo!
+Para isso siga o tutorial:
+https://cordova.apache.org/docs/en/latest/guide/cli/

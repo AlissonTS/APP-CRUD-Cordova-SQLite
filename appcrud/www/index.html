@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>APP CRUD - ALISSON TS</title>
+
+		<link rel="stylesheet" type="text/css" href="icons/material.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	
+	<body onload="verifica()">
+		<div class="container">
+
+			<div class="row">
+				<div class="col s12">
+					<h1 style="text-align:center">APP CRUD</h1>
+					<h1 style="text-align:center">ALISSON TS</h1>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col s8 offset-s2">
+					<div id="qrpopup">
+						<h4>Linha Selecionada:</h4>
+						<div class="row">
+							<div class="col s12">
+								<label for="editNameBox" style="font-size: 18px; color: black;">Disciplina:</label>
+								<input type="text" id="editNameBox" placeholder="Digite a Disciplina" maxlength="25"><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<label for="editNumberBox" style="font-size: 18px; color: black;">Tarefa:</label>
+								<input type="text" id="editNumberBox" placeholder="Digite a Tarefa" maxlength="25"><br>
+						</div>
+						<div class="row">
+							<div class="col s12">	
+								<div style="text-align: center">
+									<a class="waves-effect waves-light btn green" onclick="goEdit()" style="margin-bottom: 10px">Editar</a><br>
+									<a class="waves-effect waves-light btn red" onclick="goDelete()" style="margin-bottom: 10px">Deletar</a><br>
+									<a class="waves-effect waves-light btn blue" onclick="goNoHide()" style="margin-bottom: 10px">Fechar</a>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" id="formulario">
+				<div class="col s8 offset-s2">
+					<div class="row">
+						<div class="input-field col s12">
+							<!-- <input placeholder="Digite a Disciplina" id="txtName" type="text" class="validate"> -->
+							<input id="txtName" type="text" class="validate" maxlength="25">
+							<label for="txtName" style="font-size: 18px; color: black;">Disciplina:</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							
+							<!-- <input placeholder="Digite a Tarefa" id="txtNumber" type="text" class="validate"> -->
+							<input id="txtNumber" type="text" class="validate" maxlength="25"> 
+							<label for="txtNumber" style="font-size: 18px; color: black;">Tarefa:</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" id="botoes">
+				<div class="col s8 offset-s2">
+					<div style="text-align: center">
+						<a class="waves-effect waves-light btn green" onclick="goInsert()" style="margin-bottom: 10px">Inserir</a><br>
+						<!-- <a class="waves-effect waves-light btn blue" onclick="goSearch()" style="margin-bottom: 10px">Procurar</a><br>
+						<a class="waves-effect waves-light btn blue" onclick="successCB()" style="margin-bottom: 10px">Mostrar Todos</a> -->
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" id="tabela">
+				<div class="col s8 offset-s2">
+					<h4 style="text-align: center">Lista de Tarefas</h4>
+					<h5 style="text-align: center">Clique na Linha para Editar/Deletar a Tarefa:</h5>
+					<div id="tblDiv"></div>
+				</div>
+			</div>
+
+		</div>
+		
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/materialize.min.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+</html>

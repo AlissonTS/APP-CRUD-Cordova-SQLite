@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "csi.alisson.appcrud"
+        },
+        "cordova-sqlite-plugin": {
+            "PACKAGE_NAME": "csi.alisson.appcrud"
+        },
+        "cordova-plugin-sqlite": {
+            "PACKAGE_NAME": "csi.alisson.appcrud"
+        }
+    },
+    "dependent_plugins": {}
+}
